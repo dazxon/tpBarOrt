@@ -115,13 +115,13 @@
       </div>
 
       <div class="container-item">
-        <p>ensalada cesar</p>
+        <p>copa don pedro</p>
         <hr>
         <span class="price">0000</span>
       </div>
 
       <div class="container-item">
-        <p>bastones de muzzarellar</p>
+        <p>bocha de helado</p>
         <hr>
         <span class="price">00007</span>
       </div>
@@ -168,10 +168,11 @@
     </div>
 
   </div>
-  <button onclick="openContactForm()">Contact Us</button>
 
-  
+  <button onclick="openContactForm()">¿Tenes Alguna duda?</button>
+
   <script src="contact.js"></script>
+
   <script>
 
     // FORMATEO PARA LOS PRECIOS
@@ -190,39 +191,40 @@
     const showContactFormButton = document.getElementById('show-contact-form');
 
     showContactFormButton.addEventListener('click', function (event) {
-      event.preventDefault(); // prevent the link from reloading the page
+      event.preventDefault();
 
       const name = prompt('Please enter your name:');
       const email = prompt('Please enter your email address:');
       const message = prompt('Please enter your message:');
 
-      if (name && email && message) {
-        // submit the form with the entered data
-        const form = document.createElement('form');
-        form.setAttribute('method', 'post');
-        form.setAttribute('action', 'submit.php');
+    //     // POR SI SE NECESITA LUEGO, PARA MANDAR LOS DATOS AL SV
+    //   if (name && email && message) {
 
-        const nameInput = document.createElement('input');
-        nameInput.setAttribute('type', 'hidden');
-        nameInput.setAttribute('name', 'name');
-        nameInput.setAttribute('value', name);
-        form.appendChild(nameInput);
+    //     const form = document.createElement('form');
+    //     form.setAttribute('method', 'post');
+    //     form.setAttribute('action', 'submit.php');
 
-        const emailInput = document.createElement('input');
-        emailInput.setAttribute('type', 'hidden');
-        emailInput.setAttribute('name', 'email');
-        emailInput.setAttribute('value', email);
-        form.appendChild(emailInput);
+    //     const nameInput = document.createElement('input');
+    //     nameInput.setAttribute('type', 'hidden');
+    //     nameInput.setAttribute('name', 'name');
+    //     nameInput.setAttribute('value', name);
+    //     form.appendChild(nameInput);
 
-        const messageInput = document.createElement('input');
-        messageInput.setAttribute('type', 'hidden');
-        messageInput.setAttribute('name', 'message');
-        messageInput.setAttribute('value', message);
-        form.appendChild(messageInput);
+    //     const emailInput = document.createElement('input');
+    //     emailInput.setAttribute('type', 'hidden');
+    //     emailInput.setAttribute('name', 'email');
+    //     emailInput.setAttribute('value', email);
+    //     form.appendChild(emailInput);
 
-        document.body.appendChild(form);
-        form.submit();
-      }
+    //     const messageInput = document.createElement('input');
+    //     messageInput.setAttribute('type', 'hidden');
+    //     messageInput.setAttribute('name', 'message');
+    //     messageInput.setAttribute('value', message);
+    //     form.appendChild(messageInput);
+
+    //     document.body.appendChild(form);
+    //     form.submit();
+    //   }
     });
     </script>
     
