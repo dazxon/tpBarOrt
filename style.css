@@ -62,3 +62,30 @@ span {
   text-align: end;
   width: 20%;
 }
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1D283F;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #2C3E50;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  background-color: #1A2333;
+  box-shadow: none;
+}

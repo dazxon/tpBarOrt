@@ -168,7 +168,10 @@
     </div>
 
   </div>
+  <button onclick="openContactForm()">Contact Us</button>
 
+  
+  <script src="contact.js"></script>
   <script>
 
     // FORMATEO PARA LOS PRECIOS
@@ -182,7 +185,47 @@
     for (let i = 0; i < e.length; i++) {
       e[i].innerHTML = formatter.format(parseInt(e[i].innerHTML)).replace(/^(\D+)/, '$1 ')
     }
-  </script>
+
+    // HACER APARECER FORM
+    const showContactFormButton = document.getElementById('show-contact-form');
+
+    showContactFormButton.addEventListener('click', function (event) {
+      event.preventDefault(); // prevent the link from reloading the page
+
+      const name = prompt('Please enter your name:');
+      const email = prompt('Please enter your email address:');
+      const message = prompt('Please enter your message:');
+
+      if (name && email && message) {
+        // submit the form with the entered data
+        const form = document.createElement('form');
+        form.setAttribute('method', 'post');
+        form.setAttribute('action', 'submit.php');
+
+        const nameInput = document.createElement('input');
+        nameInput.setAttribute('type', 'hidden');
+        nameInput.setAttribute('name', 'name');
+        nameInput.setAttribute('value', name);
+        form.appendChild(nameInput);
+
+        const emailInput = document.createElement('input');
+        emailInput.setAttribute('type', 'hidden');
+        emailInput.setAttribute('name', 'email');
+        emailInput.setAttribute('value', email);
+        form.appendChild(emailInput);
+
+        const messageInput = document.createElement('input');
+        messageInput.setAttribute('type', 'hidden');
+        messageInput.setAttribute('name', 'message');
+        messageInput.setAttribute('value', message);
+        form.appendChild(messageInput);
+
+        document.body.appendChild(form);
+        form.submit();
+      }
+    });
+    </script>
+    
 </body>
 
 </html>
