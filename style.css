@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 10px;
+  background-color: antiquewhite;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.container-title {
+  background-color: black;
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.container-food {
+  padding-top: 5px;
+}
+
+.container-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+h3 {
+  padding-left: 5px;
+}
+
+h3::first-letter {
+  text-transform: uppercase;
+}
+
+p::first-letter {
+  text-transform: uppercase;
+}
+
+p {
+  text-align: start;
+  width: 33%;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px dotted black;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 200px;
+}
+
+span {
+  text-align: end;
+  width: 20%;
+}

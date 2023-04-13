@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MI BAR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="container-title">
+      <h3>entradas</h3>
+    </div>
+
+    <div class="container-food">
+      <div class="container-item">
+        <p>ensalada mixta</p>
+        <hr>
+        <span class="price">600</span>
+      </div>
+
+      <div class="container-item">
+        <p>ensalada cesar</p>
+        <hr>
+        <span class="price">700</span>
+      </div>
+
+      <div class="container-item">
+        <p>ensalada cesar con pollo</p>
+        <hr>
+        <span class="price">1100</span>
+      </div>
+
+      <div class="container-item">
+        <p>bastones de muzzarella</p>
+        <hr>
+        <span class="price">700</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="container-title">
+      <h3>hamburguesas</h3>
+    </div>
+
+    <div class="container-food">
+      <div class="container-item">
+        <p>chesseburger</p>
+        <hr>
+        <span class="price">1000</span>
+      </div>
+
+      <div class="container-item">
+        <p>doble carne doble queso</p>
+        <hr>
+        <span class="price">1200</span>
+      </div>
+
+      <div class="container-item">
+        <p>simple</p>
+        <hr>
+        <span class="price">700</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="container-title">
+      <h3>Platos</h3>
+    </div>
+
+    <div class="container-food">
+      <div class="container-item">
+        <p>Milanesa napolitana c/ guardición</p>
+        <hr>
+        <span class="price">0000</span>
+      </div>
+
+      <div class="container-item">
+        <p>ensalada cesar</p>
+        <hr>
+        <span class="price">0000</span>
+      </div>
+
+      <div class="container-item">
+        <p>bastones de muzzarellar</p>
+        <hr>
+        <span class="price">0000</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="container-title">
+      <h3>postres</h3>
+    </div>
+
+    <div class="container-food">
+      <div class="container-item">
+        <p>volcán de chocolate</p>
+        <hr>
+        <span class="price">0000</span>
+      </div>
+
+      <div class="container-item">
+        <p>ensalada cesar</p>
+        <hr>
+        <span class="price">0000</span>
+      </div>
+
+      <div class="container-item">
+        <p>bastones de muzzarellar</p>
+        <hr>
+        <span class="price">00007</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+
+    <div class="container-title">
+      <h3>bebidas</h3>
+    </div>
+
+    <div class="container-food">
+      <div class="container-item">
+        <p>coca cola 500ml</p>
+        <hr>
+        <span class="price">300</span>
+      </div>
+
+      <div class="container-item">
+        <p>pepsi 500ml</p>
+        <hr>
+        <span class="price">300</span>
+      </div>
+
+      <div class="container-item">
+        <p>seven-up 500ml</p>
+        <hr>
+        <span class="price">300</span>
+      </div>
+
+      <div class="container-item">
+        <p>corona 700ml</p>
+        <hr>
+        <span class="price">600</span>
+      </div>
+
+      <div class="container-item">
+        <p>agua 500ml</p>
+        <hr>
+        <span class="price">370</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+
+    // FORMATEO PARA LOS PRECIOS
+    let e = document.getElementsByClassName("price")
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    });
+
+    for (let i = 0; i < e.length; i++) {
+      e[i].innerHTML = formatter.format(parseInt(e[i].innerHTML)).replace(/^(\D+)/, '$1 ')
+    }
+  </script>
+</body>
+
+</html>
